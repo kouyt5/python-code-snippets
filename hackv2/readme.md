@@ -7,22 +7,6 @@
 + 通过验证码识别库识别验证码 https://github.com/sml2h3/ddddocr
 + 构造学校邮箱后缀的伪数据请求接口
 
-代理池docker封装:
-```docker-compose.yml
-version: '2'
-services:
-  proxy_pool:
-    build: .
-    container_name: proxy_pool
-    ports:
-      - "5010:5010"
-    links:
-      - proxy_redis
-    environment:
-      DB_CONN: "redis://@proxy_redis:6379/0"
-  proxy_redis:
-    image: "redis"
-```
 ## 运行
 1. 启动代理池(下载代码后 docker-compose up)
 2. python main.py
