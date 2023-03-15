@@ -8,7 +8,7 @@ def get_logger_inner():
     "[%(asctime)s] - [%(threadName)s %(filename)s :%(lineno)d] - %(levelname)s: %(message)s"
     )
     logger = logging.getLogger("main")
-    logger.setLevel(logging.DEBUG)
+    logger.setLevel(logging.INFO)
     console_handle = logging.StreamHandler()
     console_handle.setFormatter(formatter)
     file_handle = logging.FileHandler("log/log.log")
